@@ -52,6 +52,10 @@ set), try:
 
     SECRET_KEY = env("SECRET_KEY", "a_secret_key")
 
+It's also possible to raise an exception if a variable is required with the keyword ``required``::
+
+   SECRET_KEY = env("SECRET_KEY", required=True)
+
 For best results, mix with
 `django-dotenv <https://github.com/jacobian/django-dotenv>`__ and
 `dj-database-url <https://github.com/kennethreitz/dj-database-url>`__.
